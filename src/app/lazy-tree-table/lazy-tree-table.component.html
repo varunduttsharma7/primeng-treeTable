@@ -1,0 +1,64 @@
+<h1>Lazy Load</h1>
+<p-treeTable [value]="files" [columns]="cols" [paginator]="true" [rows]="3" [lazy]="true"
+    (onLazyLoad)="loadNodes($event)" [loading]="loading" (onNodeExpand)="onNodeExpand($event)" #tt>
+    <ng-template pTemplate="caption">
+        <div style="text-align: right">
+            <i class="pi pi-search" style="margin:4px 4px 0 0"></i>
+            <input type="text" pInputText size="50" placeholder="Global Filter"
+                (input)="tt.filterGlobal($event.target.value, 'contains')" style="width:auto">
+        </div>
+    </ng-template>
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+            <th>Read</th>
+            <th>Write</th>
+        </tr>
+        <!-- <tr>
+            <th *ngFor="let col of cols">
+                <input pInputText type="text" (input)="tt.filter($event.target.value, col.field, col.filterMatchMode)">
+            </th>
+            <th *ngFor="let col of cols">
+                <input pInputText type="text" (input)="tt.filter($event.target.value, col.field, col.filterMatchMode)">
+            </th>
+            <th *ngFor="let col of cols">
+                <input pInputText type="text" (input)="tt.filter($event.target.value, col.field, col.filterMatchMode)">
+            </th>
+        </tr> -->
+    </ng-template>
+    <ng-template pTemplate="body" let-rowNode let-rowData="rowData" let-columns="columns">
+        <tr>
+            <td *ngFor="let col of columns; let i = index">
+                <p-treeTableToggler [rowNode]="rowNode" *ngIf="i == 0">
+                </p-treeTableToggler>
+                {{rowData[col.field]}}
+            </td>
+            <td>
+                <div class="form-check">
+                    <label>
+                        <input type="checkbox" [checked]="rowData.read=='full'" name="clothing-type" #readChk
+                            (change)="fillContent($event,readContent,rowNode)"><span
+                            #readContent>{{setSpanConetnt(readContent,rowData.read)}}</span>
+                    </label>
+                </div>
+            </td>
+            <td>
+                <div class="form-check">
+                    <label>
+                        <input type="checkbox" [checked]="rowData.write=='full'" name="clothing-type" #readChk
+                            (change)="fillContent($event,writeContent,rowNode)"><span
+                            #writeContent>{{setSpanConetnt(writeContent,rowData.write)}}</span>
+                    </label>
+                </div>
+            </td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td [attr.colspan]="cols.length">No data found.</td>
+        </tr>
+    </ng-template>
+</p-treeTable>
+<button (click)="onGroupsLoad()">Groups</button>

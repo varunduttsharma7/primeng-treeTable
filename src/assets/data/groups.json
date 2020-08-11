@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "data": {
+                "name": "Group 1",
+                "department": "Department 1",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 2",
+                "department": "Department 1",
+                "read": "half",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 3",
+                "department": "Department 2",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 4",
+                "department": "Department 2",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 5",
+                "department": "Department 3",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 6",
+                "department": "Department 3",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 7",
+                "department": "Department 4",
+                "read": "none",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 8",
+                "department": "Department 4",
+                "read": "half",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 9",
+                "department": "Department 5",
+                "read": "half",
+                "write": "half"
+            }
+        },
+        {
+            "data": {
+                "name": "Group 10",
+                "department": "Department 5",
+                "read": "full",
+                "write": "half"
+            }
+        }
+    ]
+}

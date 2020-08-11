@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "data": {
+                "name": "Department 1",
+                "read": "half",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Department 2",
+                "read": "half",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Department 3",
+                "read": "full",
+                "write": "half"
+            }
+        },
+        {
+            "data": {
+                "name": "Department 4",
+                "read": "full",
+                "write": "full"
+            }
+        },
+        {
+            "data": {
+                "name": "Department 5",
+                "read": "full",
+                "write": "half"
+            }
+        }
+    ]
+}

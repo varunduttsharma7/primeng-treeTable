@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "data": {
+                "name": "Department 1"
+            },
+            "children": [
+                {
+                    "data": {
+                        "name": "Group 1",
+                        "size": "25mb",
+                        "type": "Folder"
+                    },
+                    "children": [
+                        {
+                            "data": {
+                                "name": "User 1"
+                            }
+                        },
+                        {
+                            "data": {
+                                "name": "User 2"
+                            }
+                        },
+                        {
+                            "data": {
+                                "name": "User 3"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "name": "Group 2"
+                    }
+                }
+            ]
+        }
+    ]
+}
